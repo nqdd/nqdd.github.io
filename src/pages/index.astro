@@ -50,20 +50,20 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		<p class="mb-4 sm:mb-8">
 			Hey guys! I'm Dat. Welcome to my blog.
 		</p>
-		<div>
-			<span>You can find me on: </span>
+		<div class="flex items-center">
+			<span>You can find me on </span>
 			<SocialMediaLinks/>
 		</div>
 	</section>
 
-	<section class="mt-8 sm:mt-16">
+	<section class="mt-8">
 		<h2 class="title">Posts</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{allPostsByPinned.map(p => <PostPreview post={p}/>)}
 		</ul>
 	</section>
 
-	<section class="mt-16">
+	<section class="mt-8">
 			<h2 class="title">Technologies</h2>
 			<ul class="space-y-4 sm:space-y-2">
 				{

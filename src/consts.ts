@@ -38,11 +38,11 @@ export const socialLinks: Array<SocialLink> = [
     friendlyName: 'Github',
     link: 'https://github.com/nqdd',
   },
-  {
-    icon: 'mdi:email',
-    friendlyName: 'email',
-    link: 'mailto:nqdat.dev@gmail.com',
-  },
+  // {
+  //   icon: 'mdi:email',
+  //   friendlyName: 'email',
+  //   link: 'mailto:email',
+  // },
   // {
   //   icon: "mdi:linkedin",
   //   friendlyName: "LinkedIn",
