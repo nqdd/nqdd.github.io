@@ -18,7 +18,7 @@ type SocialLink = {
 };
 
 export const siteConfig: Config = {
-  title: "Dat's Blog",
+  title: "Nqdd's Space",
   description: '',
   lang: 'en-GB',
   profile: {
