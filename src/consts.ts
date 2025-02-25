@@ -18,11 +18,11 @@ type SocialLink = {
 };
 
 export const siteConfig: Config = {
-  title: "Nqdd's Space",
+  title: "Karsami's Space",
   description: '',
   lang: 'en-GB',
   profile: {
-    author: 'Dat Nguyen Quoc',
+    author: 'Karsami',
     description: 'I love creating something',
   },
 };
