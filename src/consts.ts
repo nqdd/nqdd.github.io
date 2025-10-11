@@ -18,12 +18,12 @@ type SocialLink = {
 };
 
 export const siteConfig: Config = {
-  title: "Karsami's Space",
+  title: "nqdd's space",
   description: '',
   lang: 'en-GB',
   profile: {
-    author: 'Karsami',
-    description: 'I love creating something',
+    author: 'nqdd',
+    description: '',
   },
 };
 
@@ -38,16 +38,6 @@ export const socialLinks: Array<SocialLink> = [
     friendlyName: 'Github',
     link: 'https://github.com/nqdd',
   },
-  // {
-  //   icon: 'mdi:email',
-  //   friendlyName: 'email',
-  //   link: 'mailto:email',
-  // },
-  // {
-  //   icon: "mdi:linkedin",
-  //   friendlyName: "LinkedIn",
-  //   link: "#",
-  // },
 ];
 
 export const NAV_LINKS: Array<{ title: string; path: string }> = [
