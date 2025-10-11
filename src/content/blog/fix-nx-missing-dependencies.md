@@ -2,6 +2,7 @@
 title: "Fix Nx missing dependencies"
 description: ""
 pubDate: 2024-09-17
+hide: true
 ---
 If you use [nx](https://nx.dev/) in Mac, Window and Linux at the same time, you will encounter one of these problems:
 - Cannot find module `@nx/nx-darwin-x64`
