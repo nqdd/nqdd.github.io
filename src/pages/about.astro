@@ -1,15 +1,70 @@
 ---
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon';
 import Layout from '../layouts/Base.astro';
+import PostPreview from '@/components/blog/PostPreviewA';
+import SocialMediaLinks from '@/components/SocialMediaLinks';
+
+const skills = [
+	{ name: 'JavaScript', icon: 'mdi:language-javascript' },
+	{ name: 'TypeScript', icon: 'mdi:language-typescript' },
+	{ name: 'Go', icon: 'mdi:language-go' },
+	{ name: 'C#', icon: 'mdi:language-csharp' },
+	{ name: 'ExpressJS', icon: 'simple-icons:express' },
+	{ name: 'RxJS', icon: 'simple-icons:reactivex' },
+	{ name: 'Angular', icon: 'mdi:angular' },
+	{ name: 'React', icon: 'mdi:react' },
+	{ name: 'Vue', icon: 'mdi:vuejs' },
+	{ name: 'Next.js', icon: 'simple-icons:nextdotjs' },
+	{ name: 'ReactNative', icon: 'mdi:react' },
+	{ name: 'Capacitor', icon: 'simple-icons:capacitor' },
+	{ name: 'Ionic', icon: 'simple-icons:ionic' },
+	{ name: 'TailwindCSS', icon: 'mdi:tailwind' },
+	{ name: 'ASP.NET Core', icon: 'mdi:dot-net' },
+	{ name: 'GCP', icon: 'mdi:google-cloud' },
+	{ name: 'Docker', icon: 'mdi:docker' },
+	{ name: 'Git', icon: 'mdi:git' },
+	{ name: 'Supabase', icon: 'simple-icons:supabase' },
+	{ name: 'Firebase', icon: 'mdi:firebase' },
+	{ name: 'Vite', icon: 'simple-icons:vite' },
+	{ name: 'Webpack', icon: 'mdi:webpack' },
+	{ name: 'Jest', icon: 'simple-icons:jest' },
+	{ name: 'Nx', icon: 'simple-icons:nx' },
+	{ name: 'Turborepo', icon: 'mdi:fast-forward' },
+];
 ---
 
 <Layout
 	title="About Me"
-	description="Lorem ipsum dolor sit amet"
+	description="Software Engineer based in Vietnam"
 	image="/blog-placeholder-about.jpg"
 >
 	<h1 class="title">About</h1>
 	<p>
-		Welcome to my blog.
+		Hello! I'm a software engineer based in Vietnam. I enjoy building things for
+		the web and learning new technologies.
 	</p>
-</Layout>
 
+	<section class="mt-8">
+		<h2 class="title mb-4 text-xl">Skills</h2>
+		<ul
+			class="list-disc list-inside grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4"
+		>
+			{
+				skills.map(({ name, icon }) => (
+					<li class="flex items-center gap-2">
+						<Icon class="h-6 w-6" name={icon} />
+						<span>{name}</span>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Connect</h2>
+		<div class="flex flex-wrap gap-4">
+			<SocialMediaLinks />
+		</div>
+	</section>
+</Layout>
