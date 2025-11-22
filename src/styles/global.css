@@ -13,6 +13,7 @@
     --theme-surface: #e6e6e6CC;
     --theme-quote: #dd7878;
     --theme-highlight: #dd7878;
+    --bg-image-opacity: 0.5;
   }
 
   :root.dark {
@@ -24,6 +25,7 @@
     --theme-surface: #2f2f2fCC;
     --theme-quote: #93e1d4;
     --theme-highlight: #93e1d4;
+    --bg-image-opacity: 0.2;
   }
 
   html {

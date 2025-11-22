@@ -31,7 +31,8 @@ const {
 	</head>
 	<body class="relative min-h-screen">
 		<div
-			class="fixed inset-0 z-[-1] bg-[url('/bg.jpg')] bg-cover bg-center opacity-20"
+			class="fixed inset-0 z-[-1] bg-[url('/bg.jpg')] bg-cover bg-center"
+			style="opacity: var(--bg-image-opacity)"
 		>
 		</div>
 		<Header />
@@ -40,5 +41,5 @@ const {
 			<slot name="sidebar" />
 		</main>
 		<Footer />
-	</body></html
+	</body>
 </html>
