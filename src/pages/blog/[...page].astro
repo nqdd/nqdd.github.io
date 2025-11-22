@@ -1,10 +1,15 @@
 ---
-import type { Page, GetStaticPaths } from "astro";
-import type { CollectionEntry } from "astro:content";
-import BaseLayout from "@/layouts/Sidebar";
-import PostPreview from "@/components/blog/PostPreviewA";
-import Pagination from "@/components/Pagination";
-import { getAllPosts, getUniqueTags, sortMDByDate, sortMDByPinned } from "@/utils";
+import type { Page, GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/Sidebar';
+import PostPreview from '@/components/blog/PostPreviewA';
+import Pagination from '@/components/Pagination';
+import {
+	getAllPosts,
+	getUniqueTags,
+	sortMDByDate,
+	sortMDByPinned,
+} from '@/utils';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	// grab all posts besides drafts and hidden ones
@@ -16,15 +21,15 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 interface Props {
-	page: Page<CollectionEntry<"blog">>;
+	page: Page<CollectionEntry<'blog'>>;
 	tags: string[];
 }
 
 const { page, tags } = Astro.props;
 
 const meta = {
-	title: "Posts",
-	description: "Read my collection of posts and the things that interest me",
+	title: 'Posts',
+	description: 'Read my collection of posts and the things that interest me',
 };
 
 const paginationProps = {
@@ -44,14 +49,10 @@ const paginationProps = {
 ---
 
 <BaseLayout {...meta}>
-	<section class="cody-bg">
+	<section>
 		<h1 class="title">Posts</h1>
 		<ul class="flex flex-col gap-4">
-			{
-			page.data.map(post => (
-				<PostPreview post={post} withDesc/>
-			))
-			}
+			{page.data.map((post) => <PostPreview post={post} withDesc />)}
 		</ul>
 		<Pagination {...paginationProps} />
 	</section>
@@ -78,18 +79,17 @@ const paginationProps = {
 					Tags
 				</h2>
 				<ul class="flex gap-2 flex-wrap mb-4">
-					{tags.map(tag => (
+					{tags.map((tag) => (
 						<li class="tag">
-							<a 
-								href={`/tags/${tag}`}
-								aria-label={`tag: ${tag}`}
-							>
+							<a href={`/tags/${tag}`} aria-label={`tag: ${tag}`}>
 								{tag}
 							</a>
 						</li>
 					))}
 				</ul>
-				<a href="/tags" class="cody-link" aria-label="View all blog tags">See more -></a>
+				<a href="/tags" class="cody-link" aria-label="View all blog tags">
+					See more ->
+				</a>
 			</aside>
 		)
 	}
